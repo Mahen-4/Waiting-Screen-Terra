@@ -316,10 +316,6 @@ span > img {
   font-style: italic;
   margin-top: 5%;
 }
-#citation > b {
-  margin-top: 5%;
-  color: #D5C5B0;
-}
 #canvasThree{
   display: flex;
   justify-content: space-between;
