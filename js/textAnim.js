@@ -8,5 +8,4 @@ function parralax(e){
 
     move.style.transform = `translateX(${x}px) translateY(${y}px)`;
   });
-
 }
