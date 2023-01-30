@@ -36,17 +36,43 @@ body{
   border-radius: 50%;
   text-align: center;
   background: #3874ba;
-  animation: showing 5s;
-  animation-iteration-count: 1;
 }
 .cercleO:hover{
     transition: 1s;
     line-height: 140px;
 }
-@keyframes showing{
-    0%{border-radius: 10%;}
-    100%{border-radius: 50%;}
+
+#cercle0{
+  animation: clignote 1.5s;
+  animation-delay: 0s;
 }
+#cercle1{
+  animation: clignote 1.5s;
+  animation-delay: 2s;
+}
+#cercle2{
+  animation: clignote 1.5s;
+  animation-delay: 4s;
+}
+#cercle3{
+  animation: clignote 1.5s;
+  animation-delay: 6s;
+}
+#cercle4{
+  animation: clignote 1.5s;
+  animation-delay: 8s;
+}
+
+@keyframes clignote {
+    0%{
+      background-color: #3874ba;
+    }
+    100%{
+      background-color: green;
+    }
+}
+
+
 #comite_banner{
   align-items: center;
 }
