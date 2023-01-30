@@ -318,7 +318,7 @@ span > img {
 }
 #canvasThree{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 61px;
   align-items: center;
   flex-direction: row-reverse;
@@ -377,4 +377,32 @@ form #city{ display:none; }
   text-align: center;
   padding-top: 10px;
   transition: 2s;
+}
+footer > img {
+  height: 240px;
+  width: 100%;
+}
+footer > #info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 67px 20px;
+  font-size: 30px;
+  margin-top: -1%;
+  height: 30px;
+  width: 100%;
+  color: #3675DF;
+  text-align: center;
+  background-color: #3675DF;
+}
+#info  img {
+  background-color: white;
+  height: 100px;
+  border-radius: 23px;
+}
+#info >p {
+  background-color: white;
+  padding: 30px;
+  border-radius: 69px;
 }

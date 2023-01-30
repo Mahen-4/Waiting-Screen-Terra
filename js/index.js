@@ -33,7 +33,7 @@ camera.position.set(0,2,9);
 //create sphere
 const spehereGeometry = new THREE.SphereGeometry(5,50,50);
 //const spehereMaterial = new THREE.MeshBasicMaterial({color: 0xFFFFF})
-const spehereMaterial = new THREE.MeshBasicMaterial({map:textureLoader.load("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/4013c234-b843-4331-84cd-8a86d940d26f/dcrbmun-38493001-d0cc-4bd6-9acb-2bf1109b488b.jpg")})
+const spehereMaterial = new THREE.MeshBasicMaterial({map:textureLoader.load("https://i.postimg.cc/Vs2chJv5/cop-Earth-Texture3.png")})
 const sphere = new THREE.Mesh(spehereGeometry,spehereMaterial)
 sphere.position.set(0,2,0)
 
