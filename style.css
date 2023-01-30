@@ -270,6 +270,13 @@ span > img {
   height: 190px;
   margin-bottom: 15px;
   background-size: cover;
+  transition: 1s;
+}
+.card-image:hover{
+  height: 290px;
+}
+.card-image:hover + h1 {
+  display: none;
 }
 .card > h1{
   text-align: center;
