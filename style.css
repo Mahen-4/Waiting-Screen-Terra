@@ -16,7 +16,6 @@ body{
     height: 300px;
     width: 300px;
     margin-top: 8%;
-    transition: 1s;
     margin-left: 40%;
 }
 #circles{
@@ -41,26 +40,20 @@ body{
     transition: 1s;
     line-height: 140px;
 }
-
+#cercle0, #cercle1, #cercle2, #cercle3{
+  animation: clignote 1.5s ;
+}
 #cercle0{
-  animation: clignote 1.5s;
   animation-delay: 0s;
 }
 #cercle1{
-  animation: clignote 1.5s;
   animation-delay: 2s;
 }
 #cercle2{
-  animation: clignote 1.5s;
   animation-delay: 4s;
 }
 #cercle3{
-  animation: clignote 1.5s;
   animation-delay: 6s;
-}
-#cercle4{
-  animation: clignote 1.5s;
-  animation-delay: 8s;
 }
 
 @keyframes clignote {
