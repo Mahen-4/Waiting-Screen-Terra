@@ -85,3 +85,24 @@ options.forEach((option) => {
 
 
 // ----------------------------- objectifs  -------------------------------------------
+
+
+const objectifs = document.querySelectorAll(".block");
+const h1_objectif = document.querySelectorAll(".h1_objectif");
+const img_objectif = document.getElementById("logoTerra_objectif");
+
+function animate(animateThis, theAnimation){
+  animateThis.forEach((animate) => {
+    animate.style.animation = theAnimation;
+  })
+}
+
+
+document.addEventListener("scroll", (e)=>{
+  if(window.scrollY > 1200){
+    animate(objectifs,"mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards");
+    animate(h1_objectif, "mainFadeIn 2s forwards");
+    img_objectif.style.width = "100%"
+  }
+})
+
