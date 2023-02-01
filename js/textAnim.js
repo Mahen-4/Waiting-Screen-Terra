@@ -82,3 +82,6 @@ options.forEach((option) => {
     option.classList.add('active_option')
   })
 })
+
+
+// ----------------------------- objectifs  -------------------------------------------
