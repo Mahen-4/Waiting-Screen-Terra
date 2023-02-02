@@ -99,10 +99,17 @@ function animate(animateThis, theAnimation){
 
 
 document.addEventListener("scroll", (e)=>{
-  if(window.scrollY > 1200){
+  if(window.scrollY > 1300){
     animate(objectifs,"mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards");
     animate(h1_objectif, "mainFadeIn 2s forwards");
     img_objectif.style.width = "100%"
   }
 })
 
+// ----------------------------- slider comité  -------------------------------------------
+function prev(){
+  document.getElementsByClassName("card_container")[0].scrollLeft -= 350;
+}
+function next(){
+  document.getElementsByClassName("card_container")[0].scrollLeft += 350;
+}
