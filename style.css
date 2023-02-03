@@ -550,11 +550,17 @@ figure:hover::after{
   font-size: 30px;
   position: absolute;
   display: block;
-  left: 29%;
+  left: 5%;/*29%*/
+  top: -35%;
   font-weight: bold;
-  width: 39%;
+  width: 100%;/*39%*/
+  animation: clignote 8s infinite ease-in-out;
 }
-
+@keyframes clignote{
+  0%{color: white;}
+  50%{color: #8accff;}
+  100%{color: white;}
+}
 #formSection img {
   width: 70%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
