@@ -1,5 +1,6 @@
 
 <!---
+
 <?php
 $bdd = new PDO("mysql:host=127.0.0.1;dbname=waitingterra","root","");
 
@@ -12,13 +13,25 @@ if(isset($_POST['envoyer'])){
     $error = "ERREUR !";
   }
   else{
-    if(!empty($_POST['nom']) AND !empty($_POST['prenom']) AND $_POST['region'] !== "Votre Region"){
+    if(!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['pays'])){
       $nom = htmlspecialchars($_POST['nom']);
       $prenom = htmlspecialchars($_POST['prenom']);
-      $region = htmlspecialchars($_POST['region']);
-      $insertData = $bdd->prepare('INSERT INTO waitingList (nom,prenom,region) VALUES(?,?,?)');
-      $insertData->execute(array($nom,$prenom,$region));
-      $error = "Préinscription Validé ! ";
+      $pays = htmlspecialchars($_POST['pays']);
+      if(strtoupper($pays) !== "FRANCE"){
+        $insertData = $bdd->prepare('INSERT INTO waitingList (nom,prenom,pays) VALUES(?,?,?)');
+        $insertData->execute(array($nom,$prenom,$pays));
+        $error = "Vous faites partie des Terranautes !";
+      }
+      elseif(strtoupper($pays) == "FRANCE" AND $_POST['region'] == "Votre Region"){
+        $error = "Vous devez choisir une région !";
+      }
+      else{
+        $region = htmlspecialchars($_POST['region']);
+        $insertData = $bdd->prepare('INSERT INTO waitingList (nom,prenom,pays,region) VALUES(?,?,?,?)');
+        $insertData->execute(array($nom,$prenom,$pays,$region));
+        $error = "Vous faites partie des Terranautes  !";
+      }
+
     }
     else{
       $error = "Veuillez remplir tous les champs !";
@@ -40,7 +53,6 @@ if(isset($_POST['envoyer'])){
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
     <div class="img-slider">
       <div class="slide active" >
         <img src="./images/univer.png" alt="">
@@ -81,6 +93,7 @@ if(isset($_POST['envoyer'])){
         <div class="chevron"></div>
         <div class="chevron"></div>
       </div>
+      <img src="./images/Logo Terra bleu3.webp" alt="" height="150" style="position: absolute; top: 1%;left:90%; z-index: 2;"/>
     </div>
 
     <div class="comite">
@@ -88,8 +101,7 @@ if(isset($_POST['envoyer'])){
         <div class="option active_option" style="--optionBackground:url(./images/comite/webp/Etienne_Ghys.webp);">
           <div class="shadow"></div>
           <div class="label">
-            <div class="icon">
-            </div>
+            
             <div class="info_option">
               <div class="main">Étienne Ghys</div>
               <div class="sub">Mathématicien Secrétaire perpétuel de l'Académie des sciences. <br>Directeur de recherche CNRS</div>
@@ -99,8 +111,7 @@ if(isset($_POST['envoyer'])){
         <div class="option" style="--optionBackground:url(./images/comite/webp/Isabelle_Chuine.webp);">
           <div class="shadow"></div>
           <div class="label">
-            <div class="icon">
-            </div>
+            
             <div class="info_option">
               <div class="main">Isabelle Chuine</div>
               <div class="sub">Directrice de recherches CNRS au Centre d'écologie fonctionnelle et évo-<br>lutive, membre de l'académie des sciences et de l'académie d'agriculture</div>
@@ -110,8 +121,7 @@ if(isset($_POST['envoyer'])){
         <div class="option" style="--optionBackground:url(./images/comite/webp/Françoise_Combes.webp);">
           <div class="shadow"></div>
           <div class="label">
-            <div class="icon">
-            </div>
+            
             <div class="info_option">
               <div class="main">Françoise Combes</div>
               <div class="sub">Elue membre de l'Académie des Sciences le 30 novembre 2004 dans la <br>section Sciences de l'univers</div>
@@ -121,8 +131,7 @@ if(isset($_POST['envoyer'])){
         <div class="option" style="--optionBackground:url(./images/comite/webp/Hervé_Le_Treut.webp);">
           <div class="shadow"></div>
           <div class="label">
-            <div class="icon">
-            </div>
+            
             <div class="info_option">
               <div class="main">Hervé Le Treut</div>
               <div class="sub">Sommité reconnue mondialement dans son domaine,il a été le premier <br>scientifque de renommée à s'engager auprès de TERRA</div>
@@ -132,8 +141,7 @@ if(isset($_POST['envoyer'])){
         <div class="option" style="--optionBackground:url(./images/comite/webp/Eric_Westhof.webp);">
           <div class="shadow"></div>
           <div class="label">
-            <div class="icon">
-            </div>
+            
             <div class="info_option">
               <div class="main">Eric Westhof</div>
               <div class="sub">Membre de l'Académie des sciences,professeur émérite de biochimie<br>structurale délégué à l'Education et à la Formation et membre<br>du conseil d'administration de la Fondation La Main à la pâte.</div>
@@ -309,18 +317,31 @@ if(isset($_POST['envoyer'])){
           
   
       </div>
-      <div>
-        <img src="./images/Logo Terra bleu3.webp" alt="" height="240" id="logoTerra_objectif"/>
-      </div>
+      
   </div>
  <!-- <div id="error"><?php echo $error; ?></div>-->
 
-  <div id="canvasThree">
 
+ <div id="clouds">
+	<div class="cloud x1"></div>
+	<div class="cloud x2"></div>
+	<div class="cloud x3"></div>
+	<div class="cloud x4"></div>
+	<div class="cloud x5"></div>
+</div>
+
+ 
+
+  <div id="formSection">
+    <img src="./images/rooftop.webp" alt="" />
     <form method="POST" action="">
       <input type="text" placeholder="Nom" name="nom"/>
+      <div id="border_forNom"></div>
       <input type="text" placeholder="Prénom" name="prenom"/>
-      <select name="region">
+      <div id="border_forPrenom"></div>
+      <input type="text" placeholder="Votre Pays" name="pays" onkeyup="countryValue(this.value)"/>
+      <div id="border_forPays"></div>
+      <select name="region" style="display: none;" id="regionSelect">
         <option value="Votre Region">Votre Région</option>
         <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
         <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
@@ -336,26 +357,29 @@ if(isset($_POST['envoyer'])){
         <option value="Pays de la Loire">Pays de la Loire</option>
         <option value="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte d'Azur</option>
       </select>
+      <div id="border_forRegion"></div>
       <input type="text" id="city" name="city"/>
       <input type="submit" value="Rejoindre le mouvement !" name="envoyer" id="envoyer">
+      <div id="sendButton"></div>
     </form>
-
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-
-
-
   </div>
+
+
+
+<!-- 
+  <div id="canvasThree">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div> -->
   <footer>
-      <!-- <img src="./images/rooftop.webp" alt=""> -->
       <div id="info"> 
         <div class="info_top">
             <img src="./images/Logo Terra bleu3.webp" />
@@ -364,7 +388,7 @@ if(isset($_POST['envoyer'])){
         </div> 
       </div>
       <div class="info_bot">
-        <div class="info_actu">
+        <!-- <div class="info_actu">
           <h2>recevoir nos actualités</h2>
           <p>Suivez-nous !</p>
           <div class="info_icon_reseau">
@@ -372,16 +396,13 @@ if(isset($_POST['envoyer'])){
             <img src="./images/icons/facebook.webp" height="30"/>
             <img src="./images/icons/instawebp.webp" height="30"/>
           </div>
-        </div>
+        </div> -->
         <div class="info_soutien">
-          <h2>ils nous soutiennent !</h2>
+          <!-- <h2>ils nous soutiennent !</h2> -->
           <div class="info_soutien_icon">
             <img src="./images/logoAca.webp" height="100"/>
             <img src="./images/Logo_GYCP.webp" height="100" />
           </div>
-        </div>
-        <div style="margin-top: 5%; text-transform: none;">
-          <p>104, Rue Jouffroy d'Abbans à PARIS 17ème Arrondissement</p>
         </div>
       </div>
   </footer>

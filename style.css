@@ -1,11 +1,14 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fdfdfd;
+    font-family: 'Montserrat', sans-serif !important ;
+    /* font-weight: lighter !important; */
     /* background-image: url("./images/background.webp"); */
     background-size: contain;
 }
@@ -232,9 +235,10 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 10px;
+  margin-left: -10px;
   color: white;
   white-space: pre;
+  margin-top: -25px;
 }
 .info_option > div{
   position: relative;
@@ -242,7 +246,7 @@ body{
 }
 .main{
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 .sub{
   transition-delay: 0.1s;
@@ -344,9 +348,7 @@ svg:hover .arrow-fixed{
 
 }
 .card_container::-webkit-scrollbar{
-  background: rgb(194, 194, 194);
-  height: 10px;
-  border-radius: 15px;
+  display: none;
 }
 .card_container::-webkit-scrollbar-thumb{
   background: #3675BF;
@@ -405,7 +407,9 @@ figcaption h2{
 	padding-bottom: 20px;
 	font-weight: bold;
 }
-
+figcaption p {
+  font-weight: bold;
+}
 
 figure::after{
 	position: absolute;
@@ -440,14 +444,16 @@ figure:hover::after{
 
 
 .objectif_part {
-  margin-top: 3%;
+  margin-top: 8%;
   width: 100%;
-  height: 40vh;
-  background: #232323;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  background: -webkit-linear-gradient(top, #fff 0%, #c9dbe9 100%);
+  background: -linear-gradient(top, #fff 0%, #c9dbe9 100%);
+	background: -moz-linear-gradient(top, #fff 0%, #c9dbe9 100%);
 
 }
 .objectif_part .box {
@@ -456,7 +462,7 @@ figure:hover::after{
   position: relative;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   gap: 30px;
 }
 
@@ -478,7 +484,7 @@ figure:hover::after{
 }
 
 .objectif_part .h1_objectif {
-  color: #fff;
+  color: #000;
   font-size: 50px;
   /* -webkit-animation: mainFadeIn 2s forwards;
   -o-animation: mainFadeIn 2s forwards;
@@ -489,11 +495,11 @@ figure:hover::after{
   align-items: baseline;
   position: relative;
 }
-#logoTerra_objectif{
+/* #logoTerra_objectif{
   width: 0%;
   transition: 1s;
   transition-delay: 1s;
-}
+} */
 
 @keyframes mainBlock {
   0% {
@@ -532,44 +538,104 @@ figure:hover::after{
   background: url(./images/universe.jpg);
   position: relative;
 }
+#formSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+#formSection::after{
+  content: "Notre Jardin secret se trouve près des nuages … 104, Rue Jouffroy d'Abbans à PARIS dans le 17ème Arrondissement";
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  display: block;
+  left: 29%;
+  font-weight: bold;
+  width: 39%;
+}
+
+#formSection img {
+  width: 70%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
 form{
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin-right: 4%;
 }
-form input[type=text]{
+form input[type=text], form select{
   height: 50px;
   width: 400px;
-  border: 3px solid #3675BF;
-  border-radius: 15px;
+  border: none;
+  border-bottom: 2px solid #3675BF;
+  /* border-radius: 15px; */
   padding-left: 34px;
+  font-size: 20px;
+  background-color: transparent;
+}
+form input::placeholder{
+  color: black;
 }
 select{
-  border: 3px solid #3675BF;
-  border-radius: 15px;
-  padding-left: 34px;
-  width:440px;
-  height: 55px;
+  width:440px !important;
+  height: 55px !important;
+}
+select option {
+  background: #3675BF;
+  color: white;
 }
 form input[type=submit]{
   margin-left: 23%;
   font-size: 20px;
-  color: white;
+  color: #3675BF;
   border: none;
   height: 50px;
   width: 250px;
-  border-radius: 15px;
-  background-color: #3675BF;
+  background-color: transparent;
   transition: .7s;
+  z-index: 1;
+}
+#sendButton{
+  position: relative;
+}
+
+#sendButton::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: -75px;
+  left: 22%;
+  width: 121px;
+  height: 41px;
+  background-color: transparent;
+  border: 2px solid #3675BF;
+  transition: 1s;
 }
 form input[type=submit]:hover{
-  background-color: white;
-  color: #3675BF;
   cursor: pointer;
 }
+#border_forNom, #border_forPrenom, #border_forPays, #border_forRegion{
+  height: 5px;
+  width: 20px;
+  background-color: transparent;
+  border-bottom: 2px solid #d4c5af;
+  margin-top: -37px;
+  transition: 2s ease-in-out;
+}
+form input[name="nom"]:focus ~ #border_forNom, 
+form input[name="prenom"]:focus ~ #border_forPrenom,
+form input[name="pays"]:focus ~ #border_forPays, 
+form select[name="region"]:focus ~ #border_forRegion
+{
+  width: 400px;
+}
+
+
+form input[type=submit]:hover ~ #sendButton::after{
+  width: 250px;
+}
 form input:focus, select:focus{
-  border: 3px solid #D5C5B0 ;
   outline: none;
 }
 form #city{ display:none; }
@@ -706,6 +772,7 @@ footer{
   display: flex;
   flex-direction: column;
   gap: 50px;
+  margin-top: 3%;
   padding-left: 40px;
 }
 footer > img {
@@ -727,7 +794,7 @@ footer > #info {
   margin-top: 3%;
 }
 #info  .info_top > img {
-  height: 200px;
+  height: 180px;
 }
 
 .blockquote {
@@ -747,6 +814,7 @@ footer > #info {
 position: absolute;
 top: -63px;
 content:"“";
+font-family: Arial, Helvetica, sans-serif;
 font-size: 200px;
 color: #3675BF;
  
@@ -790,3 +858,146 @@ color: #3675BF;
 .info_actu > h2{
   font-weight: lighter;
 }
+
+
+
+
+
+
+
+
+#clouds{
+	background: #c9dbe9;
+	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+}
+
+/*Time to finalise the cloud shape*/
+.cloud {
+	width: 200px; height: 60px;
+	background: #fff;
+	
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	
+	position: relative; 
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: -15px; left: 10px;
+	
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+	width: 120px; height: 120px;
+	top: -55px; left: auto; right: 15px;
+}
+
+.x1 {
+	-webkit-animation: moveclouds 15s linear infinite;
+	-moz-animation: moveclouds 15s linear infinite;
+	-o-animation: moveclouds 15s linear infinite;
+}
+
+.x2 {
+	left: 200px;
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	opacity: 0.6;
+	-webkit-animation: moveclouds 25s linear infinite;
+	-moz-animation: moveclouds 25s linear infinite;
+	-o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+	left: -250px; top: -200px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8;
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+	left: 470px; top: -250px;
+	
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	opacity: 0.75;
+	
+	-webkit-animation: moveclouds 18s linear infinite;
+	-moz-animation: moveclouds 18s linear infinite;
+	-o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+	left: -150px; top: -150px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8;
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
