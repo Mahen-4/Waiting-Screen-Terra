@@ -546,7 +546,7 @@ figure:hover::after{
 }
 #formSection::after{
   content: "Notre Jardin secret se trouve près des nuages … 104, Rue Jouffroy d'Abbans à PARIS dans le 17ème Arrondissement";
-  color: white;
+  color: #8accff;
   font-size: 30px;
   position: absolute;
   display: block;
@@ -554,12 +554,13 @@ figure:hover::after{
   top: -35%;
   font-weight: bold;
   width: 100%;/*39%*/
-  animation: clignote 8s infinite ease-in-out;
+  opacity: 0;
+  animation: clignote 10s infinite ease-in-out;
 }
 @keyframes clignote{
-  0%{color: white;}
-  50%{color: #8accff;}
-  100%{color: white;}
+  0%{opacity: 0;}
+  50%{opacity: 1;}
+  100%{opacity: 0;}
 }
 #formSection img {
   width: 70%;
