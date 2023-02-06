@@ -1,0 +1,97 @@
+#quiz{
+    height: 200px;
+    width: 50%;
+    background-color: white;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 1s;
+    border: 2px solid #3675bf;
+    transition-delay: 2s;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+#quiz #quiz_end{
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    background-color: antiquewhite;
+    z-index: 2;
+    text-align: center;
+    font-size: 30px;
+    transition: 1s;
+}
+#quiz #quiz_question_icon{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+
+}
+#quiz #quiz_true_false{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+#quiz #quiz_true, #quiz #quiz_false,#quiz #quiz_suivant{
+    position: relative;
+}
+#quiz  #quiz_true::after{
+    border: 2px solid green;
+}
+
+#quiz  #quiz_false::after{
+    border: 2px solid red;
+}
+#quiz #quiz_suivant::after{
+    border: 2px solid white;
+}
+
+#quiz #quiz_true::after, #quiz #quiz_false::after, #quiz #quiz_suivant::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -14%;
+    width: 50px;
+    height: 35px;
+    background-color: transparent;
+    transition: 1s;
+}
+#quiz #quiz_false:hover::after{
+    width: 90px;
+    cursor: pointer;
+}
+#quiz  #quiz_true:hover::after{
+    width: 70px;
+    cursor: pointer;
+}
+#quiz #quiz_suivant:hover::after{
+    width: 130px;
+    cursor: pointer;
+}
+
+#quiz #quiz_answer{
+    height: 200px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 34px;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    transition: 1s;
+}
+#quiz #quiz_suivant{
+    font-size: 30px;
+}
+.quiz_hide{
+    display: none !important;
+}

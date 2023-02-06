@@ -51,6 +51,7 @@ if(isset($_POST['envoyer'])){
     <meta charset="utf-8">
     <title>Waiting Screen Terra</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleQuiz.css">
   </head>
   <body>
     <div class="img-slider">
@@ -333,6 +334,16 @@ if(isset($_POST['envoyer'])){
  
 
   <div id="formSection">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
     <img src="./images/rooftop.webp" alt="" />
     <form method="POST" action="">
       <input type="text" placeholder="Nom" name="nom"/>
@@ -365,20 +376,22 @@ if(isset($_POST['envoyer'])){
   </div>
 
 
+  <div id="quiz"> 
+    <div id="quiz_end"></div>
+    <div id="quiz_question_icon">
+      <h2 id="quiz_question">the question</h2>
+      <img id="quiz_icon" src="" alt="" height="50"/>
+    </div>
+    <div id="quiz_true_false">
+      <div id="quiz_true">Vrai</div>
+      <div id="quiz_false">Faux</div>
+    </div>
+    <div id="quiz_answer" class="quiz_hide">
+      <h3 id="quiz_response">The response here </h3>
+      <div id="quiz_suivant">Suivant</div>
+    </div>
+  </div>
 
-<!-- 
-  <div id="canvasThree">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div> -->
   <footer>
       <div id="info"> 
         <div class="info_top">
@@ -397,6 +410,8 @@ if(isset($_POST['envoyer'])){
             <img src="./images/icons/instawebp.webp" height="30"/>
           </div>
         </div> -->
+        <div id="canvasThree">
+        </div>
         <div class="info_soutien">
           <!-- <h2>ils nous soutiennent !</h2> -->
           <div class="info_soutien_icon">
@@ -409,5 +424,6 @@ if(isset($_POST['envoyer'])){
     <script src="js/three.js"></script>
     <script src="js/index.js"></script>
     <script src="js/textAnim.js"></script>
+    <script src="js/quiz.js"></script>
   </body>
 </html>
