@@ -69,6 +69,7 @@ quiz_suivant.addEventListener('click', ()=>{
         quiz_question.classList.add("quiz_hide")
         quiz_end.style.height = "100%"
         quiz.style.height = "50px";
+        quiz.style.width = "70%"
         quiz_end.innerHTML = `Terra espère vous avoir appris des choses avec ce quiz ! votre score est de ${points} / ${questions.length}`;
         quiz_answer.classList.add("quiz_hide");
     }
