@@ -1,0 +1,10 @@
+<FilesMatch "dbconfig.ini">
+  AuthName "fichier non public"
+  AuthType Basic
+  AuthUserFile "C:\wamp64\www\threeJS V3\.htpasswd"
+  Require valid-user
+</FilesMatch>
+
+RewriteEngine On
+
+RewriteRule ^WaitForTerra$ index.php

@@ -2,7 +2,8 @@
 <!---
 
 <?php
-$bdd = new PDO("mysql:host=127.0.0.1;dbname=waitingterra","root","");
+$db = parse_ini_file("./dbconfig.ini");
+$bdd = new PDO("{$db['type']}:host={$db['host']};dbname={$db['dbname']}",$db['user'],$db['pass']);
 
 $error = "";
  ?>
