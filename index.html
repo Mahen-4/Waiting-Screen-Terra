@@ -52,36 +52,43 @@ if(isset($_POST['envoyer'])){
     <meta charset="utf-8">
     <title>Waiting Screen Terra</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleSlideTheme.css">
+    <link rel="stylesheet" href="styleTitre.css">
+    <link rel="stylesheet" href="styleSliderComite.css">
+    <link rel="stylesheet" href="styleFormSection.css">
     <link rel="stylesheet" href="styleQuiz.css">
+    <link rel="stylesheet" href="styleObjectifs.css">
+    <link rel="stylesheet" href="styleFooter.css">
   </head>
   <body>
     <div class="img-slider">
+      <div id="imgBackground"></div>
       <div class="slide active" >
         <img src="./images/univer.png" alt="">
         <div class="info">
           <h2>L'univers</h2>
-          <img src="./images/L'univers.png" alt="" height="100"/>
+          <img src="./images/L'univers.png" alt="" height="50"/>
         </div>
       </div>
       <div class="slide">
         <img src="./images/explor.jpg" alt="">
         <div class="info">
           <h2>L'exploration et les Grandes Découvertes</h2>
-          <img src="./images/L'exploration et les Grandes Découvertes.png" alt="" height="100"/>
+          <img src="./images/L'exploration et les Grandes Découvertes.png" alt="" height="50"/>
         </div>
       </div>
       <div class="slide">
         <img src="./images/geogra.jpg" alt="">
         <div class="info">
           <h2>Géographie, la terre & la vie de la planète</h2>
-          <img src="./images/géographie, la terre & la vie de la planète.png" alt="" height="100"/>
+          <img src="./images/géographie, la terre & la vie de la planète.png" alt="" height="50"/>
         </div>
       </div>
       <div class="slide">
         <img src="./images/civili.jpg" alt="">
         <div class="info">
           <h2>Anthropologie & civilisation</h2>
-          <img src="./images/anthropologie & civilisation.webp" alt="" height="100"/>
+          <img src="./images/anthropologie & civilisation.webp" alt="" height="50"/>
         </div>
       </div>
       <div class="navigation">
@@ -98,67 +105,14 @@ if(isset($_POST['envoyer'])){
       <img src="./images/Logo Terra bleu3.webp" alt="" height="150" style="position: absolute; top: 1%;left:90%; z-index: 2;"/>
     </div>
 
-    <div class="comite">
-      <div class="options">
-        <div class="option active_option" style="--optionBackground:url(./images/comite/webp/Etienne_Ghys.webp);">
-          <div class="shadow"></div>
-          <div class="label">
-            
-            <div class="info_option">
-              <div class="main">Étienne Ghys</div>
-              <div class="sub">Mathématicien Secrétaire perpétuel de l'Académie des sciences. <br>Directeur de recherche CNRS</div>
-            </div>
-          </div>
-        </div>
-        <div class="option" style="--optionBackground:url(./images/comite/webp/Isabelle_Chuine.webp);">
-          <div class="shadow"></div>
-          <div class="label">
-            
-            <div class="info_option">
-              <div class="main">Isabelle Chuine</div>
-              <div class="sub">Directrice de recherches CNRS au Centre d'écologie fonctionnelle et évo-<br>lutive, membre de l'académie des sciences et de l'académie d'agriculture</div>
-            </div>
-          </div>
-        </div>
-        <div class="option" style="--optionBackground:url(./images/comite/webp/Françoise_Combes.webp);">
-          <div class="shadow"></div>
-          <div class="label">
-            
-            <div class="info_option">
-              <div class="main">Françoise Combes</div>
-              <div class="sub">Elue membre de l'Académie des Sciences le 30 novembre 2004 dans la <br>section Sciences de l'univers</div>
-            </div>
-          </div>
-        </div>
-        <div class="option" style="--optionBackground:url(./images/comite/webp/Hervé_Le_Treut.webp);">
-          <div class="shadow"></div>
-          <div class="label">
-            
-            <div class="info_option">
-              <div class="main">Hervé Le Treut</div>
-              <div class="sub">Sommité reconnue mondialement dans son domaine,il a été le premier <br>scientifque de renommée à s'engager auprès de TERRA</div>
-            </div>
-          </div>
-        </div>
-        <div class="option" style="--optionBackground:url(./images/comite/webp/Eric_Westhof.webp);">
-          <div class="shadow"></div>
-          <div class="label">
-            
-            <div class="info_option">
-              <div class="main">Eric Westhof</div>
-              <div class="sub">Membre de l'Académie des sciences,professeur émérite de biochimie<br>structurale délégué à l'Education et à la Formation et membre<br>du conseil d'administration de la Fondation La Main à la pâte.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="comite_titre">
-        <h1>Comité éthique &<br>scientifique</h1>
-      </div>
+    <div class="comite_titre">
+      <h1 class="titre">COMITÉ ÉTHIQUE & SCIENTIFIQUE</h1>
     </div>
 
     <div class="slider_card_global">
-      <div>
-        <svg  id="leftArrow_card" onclick="prev()" width="100px" height="100px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      
+      <div id="leftDiv">
+        <svg  id="leftArrow_card" onclick="prev()" width="50px" height="50px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
               <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
               <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
@@ -166,8 +120,70 @@ if(isset($_POST['envoyer'])){
           </g>
       </svg>
       </div>
-
       <div class="card_container">
+        
+        <div class="slide_card">
+          <figure id="etienneG">
+            <figcaption>
+              <h2>Étienne Ghys</h2>
+              <p>Mathématicien
+                Secrétaire perpétuel 
+                de l'Académie des sciences
+                Directeur de recherche CNRS</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="slide_card">
+          <figure id="isabelleC">
+            <figcaption>
+              <h2>Isabelle Chuine</h2>
+              <p>Directrice de recherches CNRS 
+                au Centre d'écologie fonctionnelle 
+                et évolutive à Montpellier, 
+                membre de l'académie des sciences 
+                et de l'académie d'agriculture</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="slide_card">
+          <figure id="francoiseC">
+            <figcaption>
+              <h2>Françoise Combes</h2>
+              <p>Elue membre de l'Académie des Sciences le 30 novembre 2004 
+                dans la section Sciences de l'univers, elle est une pionnière qui 
+                pense le monde à la lumière des galaxies</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="slide_card">
+          <figure id="herveT" style="background: url(./images/comite/webp/Hervé_Le_Treut.webp);">
+            <figcaption>
+              <h2>Hervé Le Treut</h2>
+              <p>Sommité reconnue mondialement dans son domaine, 
+                il a été le premier scientifique de renommée à s'engager 
+                auprès de TERRA</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="slide_card">
+          <figure id="herveT" style="background: url(./images/comite/webp/Eric_Westhof.webp);">
+            <figcaption>
+              <h2>Éric Westhof</h2>
+              <p>Membre de l'Académie des sciences, 
+                Éric Westhof est professeur émérite de 
+                biochimie structurale à l'Université de 
+                Strasbourg. 
+                Il est actuellement délégué à l'Education 
+                et à la Formation et membre du conseil 
+                d'administration de la Fondation 
+                La Main à la pâte</p>
+            </figcaption>
+          </figure>
+        </div>
 
         <div class="slide_card">
           <figure style="background: url(./images/comite/webp/Alfredo\ PENA-VEGA.webp);">
@@ -277,10 +293,10 @@ if(isset($_POST['envoyer'])){
             </figcaption>
           </figure>
         </div>
+      
       </div>
-
-      <div>
-        <svg  id="rightArrow_card" onclick="next()" width="100px" height="100px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <div id="rightDiv">
+        <svg  id="rightArrow_card" onclick="next()" width="50px" height="50px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <g>
               <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
               <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
@@ -288,64 +304,17 @@ if(isset($_POST['envoyer'])){
           </g>
       </svg>
       </div>
-    </div>
-    
-    
-
-
-
-    <div class="objectif_part">
-      <div class="box">
-  
-        <div class="title">
-            <span class="block"></span>
-            <h1 class="h1_objectif">Transmettre</h1>
-        </div>
-          
-        <div class="title">
-            <span class="block"></span>
-            <h1 class="h1_objectif">Sensibiliser</h1>
-        </div>
-
-        <div class="title">
-          <span class="block"></span>
-          <h1 class="h1_objectif">Informer</h1>
-        </div>
-
-        <div class="title">
-          <span class="block"></span>
-          <h1 class="h1_objectif">Eduquer</h1>
-        </div>
-          
-  
-      </div>
       
-  </div>
+    </div>
+        
  <!-- <div id="error"><?php echo $error; ?></div>-->
 
-
- <div id="clouds">
-	<div class="cloud x1"></div>
-	<div class="cloud x2"></div>
-	<div class="cloud x3"></div>
-	<div class="cloud x4"></div>
-	<div class="cloud x5"></div>
-</div>
-
- 
+  <div class="formSection_titre">
+    <h1 class="titre">REJOIGNEZ LES TERRANAUTES</h1>
+  </div>
 
   <div id="formSection">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <img src="./images/rooftop.webp" alt="" />
+    <div id="formSectionImage"></div>
     <form method="POST" action="">
       <input type="text" placeholder="Nom" name="nom"/>
       <div id="border_forNom"></div>
@@ -376,22 +345,57 @@ if(isset($_POST['envoyer'])){
     </form>
   </div>
 
+  <div class="quiz_titre">
+    <h1 class="titre">LE QUIZ TERRA</h1>
+  </div>
 
-  <div id="quiz"> 
-    <div id="quiz_end"></div>
-    <div id="quiz_question_icon">
-      <h2 id="quiz_question">the question</h2>
-      <img id="quiz_icon" src="" alt="" height="50"/>
+  <div id="objectif_quiz">
+
+    <div id="quiz"> 
+      <div id="quiz_end"></div>
+      <div id="quiz_question_icon">
+        <h2 id="quiz_question">the question</h2>
+        <img id="quiz_icon" src="" alt="" height="50"/>
+      </div>
+      <div id="quiz_true_false">
+        <div id="quiz_true">Vrai</div>
+        <div id="quiz_false">Faux</div>
+      </div>
+      <div id="quiz_answer" class="quiz_hide">
+        <h3 id="quiz_response">The response here </h3>
+        <div id="quiz_suivant">Suivant</div>
+      </div>
     </div>
-    <div id="quiz_true_false">
-      <div id="quiz_true">Vrai</div>
-      <div id="quiz_false">Faux</div>
-    </div>
-    <div id="quiz_answer" class="quiz_hide">
-      <h3 id="quiz_response">The response here </h3>
-      <div id="quiz_suivant">Suivant</div>
+
+    <div class="objectif_part">
+      <div class="box">
+  
+        <div class="title">
+            <span class="block"></span>
+            <h1 class="h1_objectif">Transmettre</h1>
+        </div>
+          
+        <div class="title">
+            <span class="block"></span>
+            <h1 class="h1_objectif">Sensibiliser</h1>
+        </div>
+
+        <div class="title">
+          <span class="block"></span>
+          <h1 class="h1_objectif">Informer</h1>
+        </div>
+
+        <div class="title">
+          <span class="block"></span>
+          <h1 class="h1_objectif">Eduquer</h1>
+        </div>
+          
+  
+      </div>
+      
     </div>
   </div>
+  
 
   <footer>
       <div id="info"> 
@@ -422,6 +426,7 @@ if(isset($_POST['envoyer'])){
         </div>
       </div>
   </footer>
+
     <script src="js/three.js"></script>
     <script src="js/index.js"></script>
     <script src="js/textAnim.js"></script>

@@ -1,0 +1,46 @@
+/* les titres */
+.titre{
+    margin-top: 2%;
+    font-size: 30px;
+    color: #3675BF;
+    margin-left: 3%;
+  }
+.titre::after{
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: #3675bf87;
+  position: relative;
+  top: 11px;
+  left: 0px;
+}
+.titre::before{
+  display: block;
+  position: relative;
+  top: 40px;
+  font-size: 55px;
+  left: 4px;
+  color: #c0c0c047;
+  font-weight: bolder;
+  font-family: monospace;
+}
+
+.comite_titre > h1::after{
+  width: 350px;
+}
+.comite_titre > h1::before{
+  content: 'COMITÉ ÉTHIQUE & SCIENTIFIQUE';
+}
+
+.quiz_titre > h1::after{
+  width: 150px;
+}
+.quiz_titre > h1::before{
+  content: 'LE QUIZ TERRA';
+}
+.formSection_titre > h1::after{
+  width: 200px;
+}
+.formSection_titre > h1::before{
+  content: 'REJOIGNEZ LES TERRANAUTES';
+}

@@ -9,6 +9,28 @@ const btns = document.querySelectorAll('.btn')
 let currentSlide = 1;
 
 
+//change background image when slider change 
+const imageBackground = document.getElementById("imgBackground")
+function changeBackground(currentImg){
+  switch (currentImg) {
+    case 0:
+      imageBackground.style.background = 'url(./images/univer.png)'
+      break;
+    case 1:
+      imageBackground.style.background = 'url(./images/explor.jpg)'
+      break;
+    case 2:
+      imageBackground.style.background = 'url(./images/geogra.jpg)'
+      break;
+    case 3:
+      imageBackground.style.background = 'url(./images/civili.jpg)'
+      break;
+    default:
+      imageBackground.style.background = 'url(./images/univer.png)'
+      break;
+  }
+}
+
 // manual navigation 
 
 const manualNav = (manual) => {
@@ -32,6 +54,7 @@ btns.forEach((btn,i)=>{
   btn.addEventListener('click', ()=>{
     manualNav(i);
     currentSlide = i;
+    changeBackground(i)
   })
 })
 
@@ -53,6 +76,8 @@ const repeat = (activeClass)=>{
 
       slides[i].classList.add('active')
       btns[i].classList.add('active')
+
+      changeBackground(i)
       i++
 
       if(slides.length == i){

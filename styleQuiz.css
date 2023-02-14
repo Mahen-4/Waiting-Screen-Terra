@@ -11,8 +11,7 @@
     transition: 1s;
     border: 2px solid #3675bf;
     transition-delay: 2s;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    margin-left: 1%;
 }
 #quiz #quiz_end{
     position: absolute;
