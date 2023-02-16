@@ -10,7 +10,7 @@
   }
 
 #formSection #formSectionImage {
-  background: url(./images/rooftop.webp);
+  background: url(../images/rooftop.webp);
   width: 70%;
   height: 316px;
   position: relative;

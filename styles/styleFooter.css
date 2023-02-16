@@ -1,6 +1,6 @@
 
 footer{
-    background: url(./images/background.webp);
+    background: url(../images/background.webp);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;

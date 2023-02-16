@@ -91,48 +91,48 @@ margin-right: 0;
 }
 
 #etienneG{
-background: url(./images/comite/webp/Etienne_Ghys.webp);
+background: url(../images/comite/webp/Etienne_Ghys.webp);
 background-position-x: center; 
 }
 #isabelleC{
-background: url(./images/comite/webp/Isabelle_Chuine.webp);
+background: url(../images/comite/webp/Isabelle_Chuine.webp);
 background-position-x: center;
 background-position-y: center; 
 }
 #francoiseC{
-background: url(./images/comite/webp/Françoise_Combes.webp);
+background: url(../images/comite/webp/Françoise_Combes.webp);
 background-position-x: center;
 background-size: cover;
 
 }
 #cheikhK{
-background: url(./images/comite/webp/Cheikh\ kane.webp);
+background: url(../images/comite/webp/Cheikh\ kane.webp);
 background-size: cover;
 background-repeat: no-repeat;
 background-position-x: center;
 }
 #emmaH{
-background: url(./images/comite/webp/Emma_Haziza.webp);
+background: url(../images/comite/webp/Emma_Haziza.webp);
 background-position-x: center;
 }
 #barbaraK{
-background: url(./images/comite/webp/Barbara\ Kan-Waechter.webp);
+background: url(../images/comite/webp/Barbara\ Kan-Waechter.webp);
 background-position-x: center;
 }
 #stephaneD{
-background: url(./images/comite/webp/Stéphane\ Dugast.webp);
+background: url(../images/comite/webp/Stéphane\ Dugast.webp);
 background-position-x: center;
 background-size: cover;
 background-repeat: no-repeat;
 }
 #gerardC{
-background: url(./images/comite/webp/Gérard\ Civet.webp);
+background: url(../images/comite/webp/Gérard\ Civet.webp);
 background-position-x: center;
 background-size: cover;
 background-repeat: no-repeat;
 }
 #marieS{
-background: url(./images/comite/webp/Marie-Sophie\ Lelouch.webp);
+background: url(../images/comite/webp/Marie-Sophie\ Lelouch.webp);
 background-position-x: center;
 }
 figcaption{
