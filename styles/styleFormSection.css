@@ -7,9 +7,11 @@
     position: relative;
     margin-top: 3%;
     margin-left: 3%;
+    align-items: center;
   }
 
 #formSection #formSectionImage {
+  margin-top: -5%;
   background: url(../images/rooftop.webp);
   width: 70%;
   height: 316px;
@@ -46,7 +48,7 @@ form{
   gap: 30px;
   margin-right: 4%;
 }
-form input[type=text], form select{
+form input[type=text], form select, form select, form input[type=number], form input[type=email]{
   height: 50px;
   width: 400px;
   border: none;
@@ -97,7 +99,7 @@ form input[type=submit]{
 form input[type=submit]:hover{
   cursor: pointer;
 }
-#border_forNom, #border_forPrenom, #border_forPays, #border_forRegion, #border_forEtat{
+#border_forNom, #border_forPrenom, #border_forPays, #border_forRegion, #border_forEtat, #border_forEmail, #border_forAge{
   height: 5px;
   width: 20px;
   background-color: transparent;
@@ -105,11 +107,14 @@ form input[type=submit]:hover{
   margin-top: -37px;
   transition: 2s ease-in-out;
 }
+
 form input[name="nom"]:focus ~ #border_forNom, 
 form input[name="prenom"]:focus ~ #border_forPrenom,
 form input[name="pays"]:focus ~ #border_forPays, 
 form select[name="region"]:focus ~ #border_forRegion,
-form select[name="etat"]:focus ~ #border_forEtat
+form select[name="etat"]:focus ~ #border_forEtat,
+form input[name="email"]:focus ~ #border_forEmail,
+form input[name="age"]:focus ~ #border_forAge
 {
   width: 400px;
 }

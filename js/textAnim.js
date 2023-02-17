@@ -124,7 +124,7 @@ function animate(animateThis, theAnimation){
 
 
 document.addEventListener("scroll", (e)=>{
-  if(window.scrollY > 2000){
+  if(window.scrollY > 2100){
     animate(objectifs,"mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards");
     animate(h1_objectif, "mainFadeIn 2s forwards");
   }

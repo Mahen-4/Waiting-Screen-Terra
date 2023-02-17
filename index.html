@@ -19,9 +19,11 @@ if(isset($_POST['envoyer'])){
       $nom = htmlspecialchars($_POST['nom']);
       $prenom = htmlspecialchars($_POST['prenom']);
       $pays = htmlspecialchars($_POST['pays']);
+      $email = htmlspecialchars($_POST['email']);
+      $age = htmlspecialchars($_POST['age']);
       if(strtoupper($pays) !== "FRANCE" AND  !in_array(strtoupper($pays), $etatConditionArray)){
-        $insertData = $bdd->prepare('INSERT INTO waitingList (nom,prenom,pays) VALUES(?,?,?)');
-        $insertData->execute(array($nom,$prenom,$pays));
+        $insertData = $bdd->prepare('INSERT INTO waitingList (nom,prenom,email,age,pays) VALUES(?,?,?,?,?)');
+        $insertData->execute(array($nom,$prenom,$email,$age,$pays));
         $error = "Vous faites partie des Terranautes !";
       }
       elseif(strtoupper($pays) == "FRANCE" AND $_POST['region'] == "Votre Region" OR in_array(strtoupper($pays), $etatConditionArray)  AND  $_POST['etat'] == "Votre Etat"){
@@ -30,14 +32,14 @@ if(isset($_POST['envoyer'])){
       else{
         if(strtoupper($pays) == "FRANCE"){
           $region = htmlspecialchars($_POST['region']);
-          $insertData = $bdd->prepare('INSERT INTO waitingList (nom,prenom,pays,region) VALUES(?,?,?,?)');
-          $insertData->execute(array($nom,$prenom,$pays,$region));
+          $insertData = $bdd->prepare('INSERT INTO waitingList (nom,prenom,email,age,pays,region) VALUES(?,?,?,?,?,?)');
+          $insertData->execute(array($nom,$prenom,$email,$age,$pays,$region));
           $error = "Vous faites partie des Terranautes  !";
         }
         elseif(in_array(strtoupper($pays), $etatConditionArray)){
           $etat = htmlspecialchars($_POST['etat']);
-          $insertData = $bdd->prepare('INSERT INTO waitingList (nom,prenom,pays,etat) VALUES(?,?,?,?)');
-          $insertData->execute(array($nom,$prenom,$pays,$etat));
+          $insertData = $bdd->prepare('INSERT INTO waitingList (nom,prenom,email,age,pays,etat) VALUES(?,?,?,?,?,?)');
+          $insertData->execute(array($nom,$prenom,$email,$age,$pays,$etat));
           $error = "Vous faites partie des Terranautes  !";
         }
       }
@@ -328,6 +330,10 @@ if(isset($_POST['envoyer'])){
       <div id="border_forNom"></div>
       <input type="text" placeholder="Prénom" name="prenom"/>
       <div id="border_forPrenom"></div>
+      <input type="email" placeholder="Email" name="email" class="form_data"/>
+      <div id="border_forEmail"></div>
+      <input type="number" placeholder="Age" name="age" class="form_data" min="0"/>
+      <div id="border_forAge"></div>
       <input type="text" placeholder="Votre Pays" name="pays" onkeyup="countryValue(this.value)"/>
       <div id="border_forPays"></div>
       <select name="region" style="display: none;" id="regionSelect">
@@ -446,7 +452,7 @@ if(isset($_POST['envoyer'])){
                 <!-- <h2>ils nous soutiennent !</h2> -->
                 <div class="info_soutien_icon">
                   <img src="./images/icons et logo/logoAca.webp" height="100"/>
-                  <img src="./images/icons et logo/Logo_GYCP.webp" height="60" />
+                  <img src="./images/icons et logo/Logo_GYCP.webp" height="60" width="160"/>
                 </div>
               </div>
         </div> 
