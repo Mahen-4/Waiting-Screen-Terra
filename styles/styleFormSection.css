@@ -135,4 +135,5 @@ form #city{ display:none; }
   text-align: center;
   padding-top: 10px;
   transition: 2s;
+  z-index: 5;
 }

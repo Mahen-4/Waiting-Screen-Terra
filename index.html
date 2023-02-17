@@ -4,6 +4,7 @@
 <?php
 $db = parse_ini_file("./dbconfig.ini");
 $bdd = new PDO("{$db['type']}:host={$db['host']};dbname={$db['dbname']}",$db['user'],$db['pass']);
+$etatConditionArray = array("éTATS-UNIS", "éTATS UNIS", "ETATS-UNIS", "ETATS UNIS");
 
 $error = "";
  ?>
@@ -18,21 +19,28 @@ if(isset($_POST['envoyer'])){
       $nom = htmlspecialchars($_POST['nom']);
       $prenom = htmlspecialchars($_POST['prenom']);
       $pays = htmlspecialchars($_POST['pays']);
-      if(strtoupper($pays) !== "FRANCE"){
+      if(strtoupper($pays) !== "FRANCE" AND  !in_array(strtoupper($pays), $etatConditionArray)){
         $insertData = $bdd->prepare('INSERT INTO waitingList (nom,prenom,pays) VALUES(?,?,?)');
         $insertData->execute(array($nom,$prenom,$pays));
         $error = "Vous faites partie des Terranautes !";
       }
-      elseif(strtoupper($pays) == "FRANCE" AND $_POST['region'] == "Votre Region"){
-        $error = "Vous devez choisir une région !";
+      elseif(strtoupper($pays) == "FRANCE" AND $_POST['region'] == "Votre Region" OR in_array(strtoupper($pays), $etatConditionArray)  AND  $_POST['etat'] == "Votre Etat"){
+        $error = "Vous devez remplir tous les champs !";
       }
       else{
-        $region = htmlspecialchars($_POST['region']);
-        $insertData = $bdd->prepare('INSERT INTO waitingList (nom,prenom,pays,region) VALUES(?,?,?,?)');
-        $insertData->execute(array($nom,$prenom,$pays,$region));
-        $error = "Vous faites partie des Terranautes  !";
+        if(strtoupper($pays) == "FRANCE"){
+          $region = htmlspecialchars($_POST['region']);
+          $insertData = $bdd->prepare('INSERT INTO waitingList (nom,prenom,pays,region) VALUES(?,?,?,?)');
+          $insertData->execute(array($nom,$prenom,$pays,$region));
+          $error = "Vous faites partie des Terranautes  !";
+        }
+        elseif(in_array(strtoupper($pays), $etatConditionArray)){
+          $etat = htmlspecialchars($_POST['etat']);
+          $insertData = $bdd->prepare('INSERT INTO waitingList (nom,prenom,pays,etat) VALUES(?,?,?,?)');
+          $insertData->execute(array($nom,$prenom,$pays,$etat));
+          $error = "Vous faites partie des Terranautes  !";
+        }
       }
-
     }
     else{
       $error = "Veuillez remplir tous les champs !";
