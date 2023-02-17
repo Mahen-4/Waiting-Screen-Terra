@@ -1,6 +1,6 @@
 
 footer{
-    background: url(../images/background.webp);
+    background: url(../images/backgroundFooter.webp);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -19,15 +19,17 @@ footer{
     height: 233px;
     width: 100%;
   }
-  #canvasThree{
+  /* #canvasThree{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
     width: 10%;
     height: 105px;
-    position: relative;
-  }
+    position: absolute;
+    left: 83%;
+    margin-top: -140px;
+  } */
   #info .info_top{
     display: flex;
     flex-direction: row;
@@ -79,6 +81,7 @@ footer{
    display: flex;
    flex-direction: row;
    gap:100px;
+   justify-content: center;
   }
   .info_icon_reseau{
     display: flex;
@@ -88,7 +91,7 @@ footer{
   
   .info_soutien_icon{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 50px;
   }
   .info_soutien > h2{

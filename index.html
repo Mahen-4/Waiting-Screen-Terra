@@ -102,7 +102,7 @@ if(isset($_POST['envoyer'])){
         <div class="chevron"></div>
         <div class="chevron"></div>
       </div>
-      <img src="./images/Logo Terra bleu3.webp" alt="" height="150" style="position: absolute; top: 1%;left:90%; z-index: 2;"/>
+      <img src="./images/Logo Terra bleu3.webp" alt="" height="150" style="position: absolute; top: 1%;left:2%; z-index: 2;"/>
     </div>
 
     <div class="comite_titre">
@@ -310,7 +310,7 @@ if(isset($_POST['envoyer'])){
  <!-- <div id="error"><?php echo $error; ?></div>-->
 
   <div class="formSection_titre">
-    <h1 class="titre">REJOIGNEZ LES TERRANAUTES</h1>
+    <h1 class="titre">DEVENEZ UN "TERRANAUTES"</h1>
   </div>
 
   <div id="formSection">
@@ -339,6 +339,62 @@ if(isset($_POST['envoyer'])){
         <option value="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte d'Azur</option>
       </select>
       <div id="border_forRegion"></div>
+
+      <select name="etat" style="display: none;" id="etatSelect">
+        <option value="Votre État">Votre État</option>
+        <option value="Alabama">Alabama</option>
+        <option value="Alaska">Alaska</option>
+        <option value="Arizona">Arizona</option>
+        <option value="Arkansas">Arkansas</option>
+        <option value="Californie">Californie</option>
+        <option value="Caroline du Nord">Caroline du Nord</option>
+        <option value="Caroline du Sud">Caroline du Sud</option>
+        <option value="Colorado">Colorado</option>
+        <option value="Connecticut">Connecticut</option>
+        <option value="Dakota du Nord">Dakota du Nord</option>
+        <option value="Dakota du Sud">Dakota du Sud</option>
+        <option value="Delaware">Delaware</option>
+        <option value="Floride">Floride</option>
+        <option value="Géorgie">Géorgie</option>
+        <option value="Hawaï">Hawaï</option>
+        <option value="Idaho">Idaho</option>
+        <option value="Illinois">Illinois</option>
+        <option value="Indiana">Indiana</option>
+        <option value="Iowa">Iowa</option>
+        <option value="Kansas">Kansas</option>
+        <option value="Kentucky">Kentucky</option>
+        <option value="Louisiane">Louisiane</option>
+        <option value="Maine">Maine</option>
+        <option value="Maryland">Maryland</option>
+        <option value="Massachusetts">Massachusetts</option>
+        <option value="Michigan">Michigan</option>
+        <option value="Minnesota">Minnesota</option>
+        <option value="Mississippi">Mississippi</option>
+        <option value="Missouri">Missouri</option>
+        <option value="Montana">Montana</option>
+        <option value="Nebraska">Nebraska</option>
+        <option value="Nevada">Nevada</option>
+        <option value="New Hampshire">New Hampshire</option>
+        <option value="New Jersey">New Jersey</option>
+        <option value="Nouveau-Mexique">Nouveau-Mexique</option>
+        <option value="New York">New York</option>
+        <option value="Ohio">Ohio</option>
+        <option value="Oklahoma">Oklahoma</option>
+        <option value="Oregon">Oregon</option>
+        <option value="Pennsylvanie">Pennsylvanie</option>
+        <option value="Rhode Island">Rhode Island</option>
+        <option value="Tennessee">Tennessee</option>
+        <option value="Texas">Texas</option>
+        <option value="Utah">Utah</option>
+        <option value="Vermont">Vermont</option>
+        <option value="Virginie">Virginie</option>
+        <option value="Virginie-Occidentale">Virginie-Occidentale</option>
+        <option value="Washington">Washington</option>
+        <option value="Wisconsin">Wisconsin</option>
+        <option value="Wyoming">Wyoming</option>
+      </select>
+      <div id="border_forEtat"></div>
+
       <input type="text" id="city" name="city"/>
       <input type="submit" value="Rejoindre le mouvement !" name="envoyer" id="envoyer">
       <div id="sendButton"></div>
@@ -349,7 +405,7 @@ if(isset($_POST['envoyer'])){
     <h1 class="titre">LE QUIZ TERRA</h1>
   </div>
 
-  <div id="objectif_quiz">
+  <div id="quiz_and_img">
 
     <div id="quiz"> 
       <div id="quiz_end"></div>
@@ -367,34 +423,11 @@ if(isset($_POST['envoyer'])){
       </div>
     </div>
 
-    <div class="objectif_part">
-      <div class="box">
-  
-        <div class="title">
-            <span class="block"></span>
-            <h1 class="h1_objectif">Transmettre</h1>
-        </div>
-          
-        <div class="title">
-            <span class="block"></span>
-            <h1 class="h1_objectif">Sensibiliser</h1>
-        </div>
-
-        <div class="title">
-          <span class="block"></span>
-          <h1 class="h1_objectif">Informer</h1>
-        </div>
-
-        <div class="title">
-          <span class="block"></span>
-          <h1 class="h1_objectif">Eduquer</h1>
-        </div>
-          
-  
-      </div>
-      
-    </div>
+   <div id="copImage">
+    <img src="./images/COP26.jfif" alt="">
+   </div>
   </div>
+  
   
 
   <footer>
@@ -403,27 +436,41 @@ if(isset($_POST['envoyer'])){
             <img src="./images/Logo Terra bleu3.webp" />
             <blockquote class="blockquote"><p>Le changement climatique est une manière de réfléchir au Monde que <br> nous ne voulons plus
               et surtout à celui que nous voulons construire demain</p></blockquote>
+              <div class="info_soutien">
+                <!-- <h2>ils nous soutiennent !</h2> -->
+                <div class="info_soutien_icon">
+                  <img src="./images/logoAca.webp" height="100"/>
+                  <img src="./images/Logo_GYCP.webp" height="60" />
+                </div>
+              </div>
         </div> 
       </div>
       <div class="info_bot">
-        <!-- <div class="info_actu">
-          <h2>recevoir nos actualités</h2>
-          <p>Suivez-nous !</p>
-          <div class="info_icon_reseau">
-            <img src="./images/icons/twitter.webp" height="30"/>
-            <img src="./images/icons/facebook.webp" height="30"/>
-            <img src="./images/icons/instawebp.webp" height="30"/>
+        <div class="objectif_part" id="objectif_part2">
+          <div class="box">
+      
+            <div class="title">
+                <span class="block"></span>
+                <h1 class="h1_objectif">Transmettre</h1>
+            </div>
+              
+            <div class="title">
+                <span class="block"></span>
+                <h1 class="h1_objectif">Sensibiliser</h1>
+            </div>
+    
+            <div class="title">
+              <span class="block"></span>
+              <h1 class="h1_objectif">Informer</h1>
+            </div>
+    
+            <div class="title">
+              <span class="block"></span>
+              <h1 class="h1_objectif">Éduquer</h1>
+            </div>
           </div>
-        </div> -->
-        <div id="canvasThree">
         </div>
-        <div class="info_soutien">
-          <!-- <h2>ils nous soutiennent !</h2> -->
-          <div class="info_soutien_icon">
-            <img src="./images/logoAca.webp" height="100"/>
-            <img src="./images/Logo_GYCP.webp" height="100" />
-          </div>
-        </div>
+        
       </div>
   </footer>
 

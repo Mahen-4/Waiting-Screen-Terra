@@ -16,10 +16,12 @@
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 #formSectionImage::after{
-  content: "Notre Jardin secret se trouve près des nuages … 104, Rue Jouffroy d'Abbans à PARIS dans le 17ème Arrondissement";
+  content: "Notre Jardin secret se trouve près des nuages … \A 104  Rue Jouffroy d'Abbans à PARIS dans le 17ème Arrondissement";
   position: absolute;
+  white-space: pre;
   text-align: center;
   top: 0;
   left: 0;
@@ -95,7 +97,7 @@ form input[type=submit]{
 form input[type=submit]:hover{
   cursor: pointer;
 }
-#border_forNom, #border_forPrenom, #border_forPays, #border_forRegion{
+#border_forNom, #border_forPrenom, #border_forPays, #border_forRegion, #border_forEtat{
   height: 5px;
   width: 20px;
   background-color: transparent;
@@ -106,7 +108,8 @@ form input[type=submit]:hover{
 form input[name="nom"]:focus ~ #border_forNom, 
 form input[name="prenom"]:focus ~ #border_forPrenom,
 form input[name="pays"]:focus ~ #border_forPays, 
-form select[name="region"]:focus ~ #border_forRegion
+form select[name="region"]:focus ~ #border_forRegion,
+form select[name="etat"]:focus ~ #border_forEtat
 {
   width: 400px;
 }

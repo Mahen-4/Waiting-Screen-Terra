@@ -6,7 +6,7 @@ console.log("test")
 const renderer = new THREE.WebGLRenderer({alpha: true});
 renderer.setClearColor(0x000000, 0)
 //set size of the renderer
-renderer.setSize(240,140);
+renderer.setSize(700,350);
 
 //Add the renderer to the page as a canvas
 document.getElementById("canvasThree").appendChild(renderer.domElement)

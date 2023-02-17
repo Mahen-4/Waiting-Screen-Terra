@@ -124,7 +124,7 @@ function animate(animateThis, theAnimation){
 
 
 document.addEventListener("scroll", (e)=>{
-  if(window.scrollY > 1300){
+  if(window.scrollY > 2000){
     animate(objectifs,"mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards");
     animate(h1_objectif, "mainFadeIn 2s forwards");
   }
@@ -149,4 +149,13 @@ function countryValue(country){
   else{
     document.getElementById("regionSelect").style.display = "none";
   }
+  if(country.toUpperCase() == "ÉTATS-UNIS" || 
+      country.toUpperCase() == "ETATS-UNIS" || 
+        country.toUpperCase() == "ETATS UNIS" ||
+          country.toUpperCase() == "ÉTATS UNIS" ){
+            document.getElementById("etatSelect").style.display = "block";
+          }
+          else{
+            document.getElementById("etatSelect").style.display = "none";
+          }
 }

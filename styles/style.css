@@ -14,9 +14,47 @@ body{
 }
 /* -------- NEW PAGE ------------------*/
 
-#objectif_quiz{
+#quiz_and_img{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+
+#copImage{
+  position: relative;
+}
+#copImage::after{
+  content: 'Terra présenté à la COP 26';
+    height: 1%;
+    width: 100%;
+    position: absolute;
+    top: -1%;
+    left: 0;
+    transition: .5s ease-in-out;
+    background: #3675bf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0px;
+    color: white;
+}
+#copImage:hover::after{
+  height: 100%;
+  background: #3675bfe0;
+  font-size: 40px;
+}
+#copImage::before{
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+#copImage > img{
+  height: 413px;
+  width: 100%;
 }
