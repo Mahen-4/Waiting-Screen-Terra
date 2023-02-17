@@ -14,19 +14,19 @@ const imageBackground = document.getElementById("imgBackground")
 function changeBackground(currentImg){
   switch (currentImg) {
     case 0:
-      imageBackground.style.background = 'url(./images/univer.png)'
+      imageBackground.style.background = 'url(./images/slider/univer.png)'
       break;
     case 1:
-      imageBackground.style.background = 'url(./images/explor.jpg)'
+      imageBackground.style.background = 'url(./images/slider/explor.jpg)'
       break;
     case 2:
-      imageBackground.style.background = 'url(./images/geogra.jpg)'
+      imageBackground.style.background = 'url(./images/slider/geogra.jpg)'
       break;
     case 3:
-      imageBackground.style.background = 'url(./images/civili.jpg)'
+      imageBackground.style.background = 'url(./images/slider/civili.jpg)'
       break;
     default:
-      imageBackground.style.background = 'url(./images/univer.png)'
+      imageBackground.style.background = 'url(./images/slider/univer.png)'
       break;
   }
 }

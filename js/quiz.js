@@ -14,25 +14,25 @@ const questions = [
         "question": "La lumière du Soleil met 8 minutes et 20 secondes à nous atteindre",
         "response": "C'est vrai ! temps = distance / vitesse donc ici t = 150000000 / 300000 = 500s soit 8 min 20 s. 150000000 millions de km étant la distance de la terre jusqu'au soleil et 300000 la vitesse de la lumière en Km/s ",
         "answer": true,
-        "imgSrc": "./images/L'univers.png",
+        "imgSrc": "./images/icons et logo/L'univers.png",
     },
     {
         "question": "L'océan antarctique doit son nom à l'explorateur portugais Magellan",
         "response": "C'est faux ! Megellan nomma l'océan Pacifique en raison des eaux calmes de cet océan",
         "answer": false,
-        "imgSrc": "./images/L'exploration et les Grandes Découvertes.png",
+        "imgSrc": "./images/icons et logo/L'exploration et les Grandes Découvertes.png",
     },
     {
         "question": "Le drapeau du Népal est rectangulaire.",
         "response": "C'est faux ! Il se compose de deux triangles l'un au-dessus de l'autre",
         "answer": false,
-        "imgSrc": "./images/géographie, la terre & la vie de la planète.png",
+        "imgSrc": "./images/icons et logo/géographie, la terre & la vie de la planète.png",
     },
     {
         "question": "Les Vikings ont créé l'un des premiers parlements du monde",
         "response": "C'est vrai ! tous les hommes libres allaient au Thing pour prendre des décisions politiques et régler les querelles. Le Thing est une assemblée locale qui s'occupe de la justice et des lois",
         "answer": true,
-        "imgSrc": "./images/anthropologie & civilisation.webp",
+        "imgSrc": "./images/icons et logo/anthropologie & civilisation.webp",
     }
 ]
 let points = 0;
