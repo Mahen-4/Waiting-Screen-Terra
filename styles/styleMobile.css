@@ -1,7 +1,6 @@
 @media screen and (max-width: 780px) {
 
     /*THEME SLIDER */
-
     .img-slider .slide{
         height: 40vh;
         margin-top: 40%;
@@ -100,7 +99,6 @@
     }
 
     /* FOOTER */
-
     #info .info_top{
         flex-direction: column;
     }
@@ -113,6 +111,7 @@
     .info_bot{
         text-transform: initial;
     }
+
     /* OBJECTIF */
     .objectif_part .h1_objectif{
         font-size: 20px;
