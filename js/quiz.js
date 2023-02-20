@@ -8,7 +8,7 @@ const quiz_suivant = document.getElementById("quiz_suivant");
 const quiz = document.getElementById("quiz");
 const quiz_end = document.getElementById("quiz_end");
 const quiz_icon = document.getElementById("quiz_icon");
-
+let x = window.matchMedia("(max-width: 780px)")
 const questions = [
     {
         "question": "La lumière du Soleil met 8 minutes et 20 secondes à nous atteindre",
@@ -68,7 +68,9 @@ quiz_suivant.addEventListener('click', ()=>{
         quiz_true_false.classList.add("quiz_hide")
         quiz_question.classList.add("quiz_hide")
         quiz_end.style.height = "100%"
-        quiz.style.height = "50px";
+        // quiz.style.height = "50px";
+        screenMobile(x)
+        //x.addListener(screenMobile);
         quiz.style.width = "70%";
         quiz_icon.classList.add("quiz_hide")
         quiz_end.innerHTML = `Terra espère vous avoir appris des choses avec ce quiz ! votre score est de ${points} / ${questions.length}`;
@@ -85,3 +87,12 @@ quiz_suivant.addEventListener('click', ()=>{
     
 
 })
+
+function screenMobile(x) {
+    if (x.matches) { // If media query matches
+        quiz.style.height = "110px";
+    } 
+    else{
+        quiz.style.height = "50px";
+    }
+  }

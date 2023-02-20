@@ -1,0 +1,119 @@
+@media screen and (max-width: 780px) {
+
+    /*THEME SLIDER */
+
+    .img-slider .slide{
+        height: 40vh;
+        margin-top: 40%;
+        width: 100%;
+    }
+    .img-slider .slide .info{
+        padding: 10px 15px;
+    }
+    .img-slider .slide .info h2{
+        font-size: 15px;
+    }
+    #logoTerraSlider{
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .img-slider{
+        padding-bottom: 60px;
+    }
+
+    /* TITRES*/
+    .titre{
+        font-size: 25px;
+    }
+    .titre::before{
+        font-size: 35px;
+        top: 30px;
+    }
+
+    /* SLIDER COMITE */
+    #leftDiv, #rightDiv{
+        height: 87.5%;
+        top: 52%;
+        width: 50px;
+    }
+    #rightDiv{
+        left: 92%;
+    }
+    svg{
+       height: 30px; 
+       margin-left: 0%;
+    }
+    .slider_card_global{
+        margin-left: 0%;
+    }
+
+    /* FORM SECTION*/
+    #formSection{
+        flex-direction: column;
+        margin-top: 15%;
+        align-items: center;
+        margin-left: 0%;
+    }
+    #formSection #formSectionImage{
+        width: 100%;
+        height: 315px;
+        background-size: cover;
+        animation: leftTOright 15s infinite;
+        background-position-x: left;
+    }
+    @keyframes leftTOright{
+        0%{background-position-x: left;}
+        50%{background-position-x: right;}
+        100%{background-position-x: left;}
+        
+    }
+    #formSectionImage::after{
+        font-size: 19px;
+    }
+    form{
+        margin-right: 0%;
+    }
+
+    /* COP IMAGE */
+    #copImage > img{
+        height: 600px;
+    }
+
+    /* QUIZ */
+    #quiz{
+        width: 90%;
+        left: 4%;
+        background-color: rgba(48, 48, 48, 0.396);
+    }
+    #quiz #quiz_answer{
+        width: 94%;
+        font-size: 20px;
+    }
+    #quiz_question{
+        width: 75%;
+    }
+    #quiz #quiz_question_icon{
+        gap: 10px;
+        justify-content: center;
+    }
+
+    /* FOOTER */
+
+    #info .info_top{
+        flex-direction: column;
+    }
+    footer{
+        height: 1000px;
+    }
+    footer > #info {
+        height: 552px;
+    }
+    .info_bot{
+        text-transform: initial;
+    }
+    /* OBJECTIF */
+    .objectif_part .h1_objectif{
+        font-size: 20px;
+    }
+  }
