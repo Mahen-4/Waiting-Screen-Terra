@@ -173,11 +173,11 @@ background: linear-gradient(0deg, #2f2f2fed 1%, rgba(255, 255 ,255 , 0) 50%);
 transition: 1.5s;
 }
 
-figure:hover figcaption{
+figure:hover figcaption, figure:active figcaption{
     top: 50%;
     transform: translateY(-50%);
 }
 
-figure:hover::after{
+figure:hover::after, figure:active::after{
 background: linear-gradient(0deg, #3675df8a 40%, rgba(255, 255 ,255 , 0) 100%);
 }

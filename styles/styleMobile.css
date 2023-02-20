@@ -69,7 +69,8 @@
         
     }
     #formSectionImage::after{
-        font-size: 19px;
+        font-size: 23px;
+        white-space: pre-line;
     }
     form{
         margin-right: 0%;

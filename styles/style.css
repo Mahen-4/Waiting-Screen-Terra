@@ -14,14 +14,14 @@ body{
 }
 /* -------- NEW PAGE ------------------*/
 
-#quiz_and_img{
+/* #quiz_and_img{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   height: 350px;
   position: relative;
-}
+} */
 #copImage{
   position: relative;
 }
