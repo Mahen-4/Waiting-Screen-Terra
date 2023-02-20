@@ -25,7 +25,7 @@ body{
 #copImage{
   position: relative;
 }
-#copImage::after{
+/* #copImage::after{
   content: 'Terra présenté à la COP 26';
     height: 1%;
     width: 100%;
@@ -39,12 +39,12 @@ body{
     align-items: center;
     font-size: 0px;
     color: white;
-}
-#copImage:hover::after{
+} */
+/* #copImage:hover::after{
   height: 100%;
   background: #3675bfe0;
   font-size: 40px;
-}
+} */
 #copImage::before{
   content: '';
   position: absolute;
@@ -52,10 +52,11 @@ body{
   left: 0;
   height: 100%;
   width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background: #00000090;
+  /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
 }
 
 #copImage > img{
-  height: 413px;
   width: 100%;
+    height: 1000px;
 }

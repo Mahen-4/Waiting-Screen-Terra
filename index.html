@@ -15,7 +15,7 @@ if(isset($_POST['envoyer'])){
     $error = "ERREUR !";
   }
   else{
-    if(!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['pays'])){
+    if(!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['pays']) AND !empty($_POST['email']) AND !empty($_POST['age'])){
       $nom = htmlspecialchars($_POST['nom']);
       $prenom = htmlspecialchars($_POST['prenom']);
       $pays = htmlspecialchars($_POST['pays']);
@@ -415,11 +415,9 @@ if(isset($_POST['envoyer'])){
     </form>
   </div>
 
-  <div class="quiz_titre">
-    <h1 class="titre">LE QUIZ TERRA</h1>
-  </div>
+  
 
-  <div id="quiz_and_img">
+  <!-- <div id="quiz_and_img">
 
     <div id="quiz"> 
       <div id="quiz_end"></div>
@@ -436,12 +434,31 @@ if(isset($_POST['envoyer'])){
         <div id="quiz_suivant">Suivant</div>
       </div>
     </div>
-
-   <div id="copImage">
-    <img src="./images/COP26.jfif" alt="">
-   </div>
   </div>
-  
+  -->
+
+  <div id="copImage">
+    <div class="quiz_titre">
+      <h1 class="titre">LE QUIZ TERRA</h1>
+    </div>
+    <img src="./images/COP26.jfif" alt="">
+    <div id="quiz"> 
+      <div id="quiz_end"></div>
+      <div id="quiz_question_icon">
+        <h2 id="quiz_question">the question</h2>
+        <img id="quiz_icon" src="" alt="" height="50"/>
+      </div>
+      <div id="quiz_true_false">
+        <div id="quiz_true">Vrai</div>
+        <div id="quiz_false">Faux</div>
+      </div>
+      <div id="quiz_answer" class="quiz_hide">
+        <h3 id="quiz_response">The response here </h3>
+        <div id="quiz_suivant">Suivant</div>
+      </div>
+    </div>
+   </div>
+
   <footer>
       <div id="info"> 
         <div class="info_top">

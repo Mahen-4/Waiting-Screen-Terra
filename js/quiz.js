@@ -14,25 +14,25 @@ const questions = [
         "question": "La lumière du Soleil met 8 minutes et 20 secondes à nous atteindre",
         "response": "C'est vrai ! temps = distance / vitesse donc ici t = 150000000 / 300000 = 500s soit 8 min 20 s. 150000000 millions de km étant la distance de la terre jusqu'au soleil et 300000 la vitesse de la lumière en Km/s ",
         "answer": true,
-        "imgSrc": "./images/icons et logo/L'univers.png",
+        "imgSrc": "./images/icons et logo/icon white/L'univers white.png",
     },
     {
         "question": "L'océan antarctique doit son nom à l'explorateur portugais Magellan",
         "response": "C'est faux ! Megellan nomma l'océan Pacifique en raison des eaux calmes de cet océan",
         "answer": false,
-        "imgSrc": "./images/icons et logo/L'exploration et les Grandes Découvertes.png",
+        "imgSrc": "./images/icons et logo/icon white/L'exploration et les Grandes Découvertes white.png",
     },
     {
         "question": "Le drapeau du Népal est rectangulaire.",
         "response": "C'est faux ! Il se compose de deux triangles l'un au-dessus de l'autre",
         "answer": false,
-        "imgSrc": "./images/icons et logo/géographie, la terre & la vie de la planète.png",
+        "imgSrc": "./images/icons et logo/icon white/géographie, la terre & la vie de la planète white.png",
     },
     {
         "question": "Les Vikings ont créé l'un des premiers parlements du monde",
         "response": "C'est vrai ! tous les hommes libres allaient au Thing pour prendre des décisions politiques et régler les querelles. Le Thing est une assemblée locale qui s'occupe de la justice et des lois",
         "answer": true,
-        "imgSrc": "./images/icons et logo/anthropologie & civilisation.webp",
+        "imgSrc": "./images/icons et logo/icon white/anthropologie & civilisation white.png",
     }
 ]
 let points = 0;
@@ -69,9 +69,12 @@ quiz_suivant.addEventListener('click', ()=>{
         quiz_question.classList.add("quiz_hide")
         quiz_end.style.height = "100%"
         quiz.style.height = "50px";
-        quiz.style.width = "70%"
+        quiz.style.width = "70%";
+        quiz_icon.classList.add("quiz_hide")
         quiz_end.innerHTML = `Terra espère vous avoir appris des choses avec ce quiz ! votre score est de ${points} / ${questions.length}`;
         quiz_answer.classList.add("quiz_hide");
+        quiz_end.style.width = "100%"
+        quiz.style.width = "90%"
     }
     else{
         quiz_answer.classList.add("quiz_hide");

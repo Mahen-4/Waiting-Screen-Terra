@@ -38,6 +38,17 @@
 .quiz_titre > h1::before{
   content: 'LE QUIZ TERRA';
 }
+.quiz_titre{
+  position: absolute;
+  top: 0px;
+  width: 443px;
+  height: 163px;
+}
+.quiz_titre >h1{
+  
+  color: white !important;
+  margin-left: 11% !important;
+}
 .formSection_titre > h1::after{
   width: 200px;
 }
