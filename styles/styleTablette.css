@@ -99,17 +99,17 @@
     /* FOOTER */
     #info .info_top{
         flex-direction: column;
+        gap: 0;
     }
     footer{
         height: 850px;
     }
-    footer > #info {
+    /* footer > #info {
         height: 406px;
-    }
+    } */
     .info_bot{
         text-transform: initial;
     }
-
     /* OBJECTIF */
     .objectif_part .h1_objectif{
         font-size: 20px;

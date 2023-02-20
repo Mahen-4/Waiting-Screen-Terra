@@ -101,13 +101,17 @@
     /* FOOTER */
     #info .info_top{
         flex-direction: column;
+        gap: 0px;
+    }
+    #info .info_top > img {
+        padding-bottom: 30px;
     }
     footer{
         height: 1000px;
     }
-    footer > #info {
-        height: 475px;
-    }
+    /* footer > #info {
+        height: 475px; 
+    } */
     .info_bot{
         text-transform: initial;
     }

@@ -8,6 +8,7 @@ footer{
     gap: 50px;
     margin-top: 5%;
     padding-left: 40px;
+    height: 465px;
   }
   footer > img {
     height: 300px;
@@ -16,7 +17,7 @@ footer{
   footer > #info {
     font-size: 30px;
     margin-top: 1%;
-    height: 233px;
+    height: 375px;
     width: 100%;
   }
   /* #canvasThree{
