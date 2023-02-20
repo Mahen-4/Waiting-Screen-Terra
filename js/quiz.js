@@ -9,6 +9,8 @@ const quiz = document.getElementById("quiz");
 const quiz_end = document.getElementById("quiz_end");
 const quiz_icon = document.getElementById("quiz_icon");
 let x = window.matchMedia("(max-width: 780px)")
+let xtablette = window.matchMedia("(max-width: 1024px)")
+
 const questions = [
     {
         "question": "La lumière du Soleil met 8 minutes et 20 secondes à nous atteindre",
@@ -70,6 +72,7 @@ quiz_suivant.addEventListener('click', ()=>{
         quiz_end.style.height = "100%"
         // quiz.style.height = "50px";
         screenMobile(x)
+        screenTablette(xtablette)
         //x.addListener(screenMobile);
         quiz.style.width = "70%";
         quiz_icon.classList.add("quiz_hide")
@@ -96,3 +99,12 @@ function screenMobile(x) {
         quiz.style.height = "50px";
     }
   }
+
+function screenTablette(x){
+    if(x.matches){
+        quiz.style.height = "80px"
+    }
+    else{
+        quiz.style.height = "50px"
+    }
+}  
