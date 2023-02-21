@@ -1,4 +1,5 @@
 @media screen and (max-width: 1384px) and (min-width: 800px){
+
     /*THEME SLIDER */
     .img-slider .slide{
         height: 60vh;
@@ -28,6 +29,7 @@
         font-size: 35px;
         top: 30px;
     }
+
     /* SLIDER COMITE */
     #leftDiv, #rightDiv{
         height: 85.5%;
@@ -110,6 +112,7 @@
     .info_bot{
         text-transform: initial;
     }
+    
     /* OBJECTIF */
     .objectif_part .h1_objectif{
         font-size: 20px;
